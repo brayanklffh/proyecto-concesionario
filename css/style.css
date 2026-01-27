@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.contenedorVideo{
+    
+   width: 100%;
+  position: relative;
+ 
+  
+}
+
+video{
+  width: 100%;
+  height: auto;
+}
+
+.capaVideo, .capaVideo2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+}
+.capaVideo{
+  background-color: #0007;
+  z-index: 1;
+}
+.capaVideo2{
+  background: linear-gradient(to bottom, transparent 70%, #000000 100%);
+  z-index: 2;
+}
+.contenidoVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 50%;
+  height: 100%;
+  text-shadow: black 2px 2px 4px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 10%;
+  text-align: start;
+}
+
+.tituloPrincipal {
+  font-size: 70px;
+  margin: 0;
+  color: #fff;
+  width: 700px;
+ 
+}
+
+
+.botonVideo {
+  margin-top: 3%;
+  padding: 10px 20px;
+  font-size: 26px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  
+  
+}
+
+.texto-galeria {
+  text-align: center;
+  color: #a1824a;
+  letter-spacing: 8px;
+  margin: 50px 20px 20px 20px;
+  
+}
+
+.titulo-galeria {
+  font-size: 40px;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+ 
+}
+.galeria-imagenes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+
+
+.card-vehiculo {
+  position: relative; /* Crea el marco de referencia para la capa */
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Corta la capa y la imagen para que respeten las esquinas redondeadas */
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-vehiculo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que el carro se vea estirado */
+  display: block;
+}
+
+/* La capa  sobre la imagen */
+.capa-imagenes {
+  position: absolute; /* Se ancla al .card-vehiculo más cercano*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.11) 0%,  rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.98) 100%);
+  z-index: 2; 
+  pointer-events: none; 
+}
+
+/* Estilos para el texto dentro de la tarjeta  */
+.info-vehiculo {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 3; /* Por encima de la capa oscura  */
+  font-size:10px;
+  min-width: 90%;
+
+
+  
+}
+.textos{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .galeria-imagenes {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 10px;
+    }
+
+    .tituloPrincipal {
+      font-size: 35px;
+      width: 90%;
+    }
+}
+
+
+
+@media (max-width: 564px) {
+  .tituloPrincipal {
+   font-size: 21px;
+   width: 240px;
+  }
+  .contenidoVideo {
+  max-width: 100%;
+
+}  
+.botonVideo {
+  font-size: 13px;
+  padding: 8px;
+
+}
+.texto-galeria {
+ font-size: 10px;
+ margin-bottom: 4px;
+}
+.titulo-galeria {
+ font-size: 20px;
+
+}
+
+}
+
+
+
+@media (min-width: 565px) and (max-width: 666px) {
+    .tituloPrincipal {
+    font-size: 32px;
+    width: 340px;
+    
+  }
+  .botonVideo {
+  font-size: 13px;
+  padding: 5px;
+
+}
+
+}
+
+@media (min-width: 666px) and (max-width: 1441px) {
+    .tituloPrincipal {
+    font-size: 41px;
+    width: 450px;
+    
+  }
+  .botonVideo {
+  font-size: 13px;
+  padding: 5px;
+
+}
+
+}
+
+
+@media (max-width: 770px) {
+   .textos{
+   display: none;
+  }
+}
