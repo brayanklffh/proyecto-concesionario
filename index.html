@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veloce Motors | Encuentra tu estilo</title>
 
     <link rel="icon" type="image/png" href="imagenes/logo simple.png" />
     <link rel="stylesheet" href="css/style.css" />
@@ -16,9 +15,52 @@
       rel="stylesheet"
     />
     <title>Veloce Motors</title>
+
+    <meta
+      name="description"
+      content="Veloce Motors es una concesionaria premium donde encuentras vehículos deportivos, eléctricos y familiares con diseño, tecnología y alto rendimiento."
+    />
   </head>
   <body>
-    <section>
+    <header>
+      <div class="header-mobil">
+        <!-- Botón abrir -->
+        <button id="abrirMenu" class="toggle">
+          <img class="botonMenu" src="imagenes/menu.svg" alt="botondelMenu" />
+        </button>
+
+        <!-- Menú -->
+        <nav class="slide" id="menu">
+          <!-- Botón cerrar -->
+          <button id="cerrarMenu" class="cerrar">
+            <img
+              class="botonCerrar"
+              src="imagenes/cruz.svg"
+              alt="botondelMenu"
+            />
+          </button>
+
+          <h3 class="menu">Menú</h3>
+          <ul class="lista">
+            <li><a href="#">Modelos</a></li>
+            <li><a href="#">Test Drive</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-pc">
+        <nav class="nav-pc">
+          <ul class="lista-pc">
+            <li><a href="#">Modelos</a></li>
+            <li><a href="#">Test Drive</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
       <div class="contenedorVideo">
         <video class="video" autoplay muted loop playsinline>
           <source src="videos/VideoPrincipal.mp4" type="video/mp4" />
@@ -27,16 +69,16 @@
         <div class="capaVideo"></div>
         <div class="capaVideo2"></div>
         <div class="contenidoVideo">
-          <h6 class="tituloPrincipal">Encuentra el auto que siempre soñaste</h6>
-          <button class="botonVideo">Ver Catálogo</button>
+          <h1 class="tituloPrincipal">Encuentra el auto que siempre soñaste</h1>
+          <button class="botonVideo"><b>Ver Catálogo</b></button>
         </div>
       </div>
-    </section>
+    </main>
 
     <section class="clases-de-vehiculos">
       <div class="texto-galeria">
         <p class="sub-titulo-galeria"><b>PARA CADA OCASIÓN</b></p>
-        <h2 class="titulo-galeria">encuentra tu auto ideal</h2>
+        <h2 id="prueba" class="titulo-galeria">encuentra tu auto ideal</h2>
       </div>
 
       <div class="galeria-imagenes">
@@ -44,6 +86,8 @@
           <img
             src="imagenes/vehiculos de diario.jpg"
             alt="Vehículos de diario"
+            width="600"
+            height="400"
           />
           <div class="capa-imagenes"></div>
           <div class="info-vehiculo">
@@ -59,6 +103,8 @@
           <img
             src="imagenes/vehiculos deportivos.jpg"
             alt="Vehículos deportivos"
+            width="600"
+            height="400"
           />
           <div class="capa-imagenes"></div>
           <div class="info-vehiculo">
@@ -73,6 +119,8 @@
           <img
             src="imagenes/vehiculos electricos.jpg"
             alt="Vehículos eléctricos"
+            width="600"
+            height="400"
           />
           <div class="capa-imagenes"></div>
           <div class="info-vehiculo">
@@ -86,6 +134,8 @@
           <img
             src="imagenes/vehiculos todoterreno.jpg"
             alt="Vehículos todoterreno"
+            width="600"
+            height="400"
           />
           <div class="capa-imagenes"></div>
           <div class="info-vehiculo">
@@ -98,6 +148,75 @@
       </div>
     </section>
 
+    <section class="porque-elegirnos" id="catalogo">
+      <div class="contenedor-textos" >
+        <p class="subtitulo"><b>USADOS DE PRIMERA</b></p>
+        <h2 class="titulo-seccionbeneficios" >
+          ¿Por qué comprar en Veloce Motors?
+        </h2>
+      </div>
+      <div class="contenedorbeneficios">
+        <div class="beneficio-imagen1">
+          <img
+            class="beneficios"
+            src="imagenes/consecionario.png"
+            alt="Concesionario Veloce Motors"
+          />
+
+          <div class="beneficio-info" >
+            <h3 class="titulos-beneficio">INGENIERÍA Y PERFECCIÓN</h3>
+            <p>
+              En Veloce Motors, seleccionamos cada vehículo bajo los más altos
+              estándares de la industria. Nuestra trayectoria garantiza que te
+              lleves un auto con historial transparente, rendimiento certificado
+              y una estética impecable que redefine el concepto de usado.
+            </p>
+          </div>
+        </div>
+
+        <div class="beneficio-imagen2">
+          <img
+            class="beneficios"
+            src="imagenes/inspeccion.jpg"
+            alt="Concesionario Veloce Motors"
+            id="imagen-derecha"
+          />
+
+          <div class="beneficio-info" id="texto-izquierda">
+            <h3 class="titulos-beneficio">TRANSPARENCIA SIN CURVAS</h3>
+            <p>
+              Creemos en la honestidad total. Cada unidad en nuestra sala de
+              exhibición cuenta con una certificación técnica completa y
+              documentación verificada. Aquí, la única sorpresa que te llevarás
+              será la potencia de tu nuevo motor al encenderlo por primera vez.
+            </p>
+          </div>
+        </div>
+
+        <div class="beneficio-imagen3">
+          <img
+            class="beneficios"
+            src="imagenes/Entrega.avif"
+            alt="Concesionario Veloce Motors"
+          />
+
+          <div class="beneficio-info">
+            <h3 class="titulos-beneficio">ATENCIÓN DE PRIMERA CLASE</h3>
+            <p>
+              Comprar en Veloce Motors es entrar a un mundo de exclusividad.
+              Desde la asesoría personalizada hasta nuestros planes de
+              financiamiento a medida, nos aseguramos de que el proceso sea tan
+              fluido y emocionante como conducir el auto de tus sueños.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p ><b>Veloce Motors - Concesionario Premium</b></p>
+      <p class="texto-footer">Dirección: Av. Principal 123, Ciudad, País</p>
+      <p class="texto-footer">Teléfono: +1 (555) 123-4567</p>
+    </footer>
     <script src="js/js.js"></script>
   </body>
 </html>

@@ -29,3 +29,28 @@ document.getElementById("button2").onclick = () => {
 document.getElementById("button3").onclick = () => {
   toggleTexto("vehiculostodoterreno");
 };
+
+
+
+
+const menu = document.getElementById("menu");
+const abrir = document.getElementById("abrirMenu");
+const cerrar = document.getElementById("cerrarMenu");
+
+abrir.addEventListener("click", () => {
+  menu.classList.add("abierto");
+});
+
+cerrar.addEventListener("click", () => {
+  menu.classList.remove("abierto");
+});
+
+
+
+
+
+
+
+
+
+

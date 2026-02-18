@@ -10,12 +10,10 @@ body{
     color: #ffffff;
 }
 
+/* --- SECCIÓN VIDEO --- */
 .contenedorVideo{
-    
-   width: 100%;
+  width: 100%;
   position: relative;
- 
-  
 }
 
 video{
@@ -43,7 +41,6 @@ video{
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 50%;
   height: 100%;
   text-shadow: black 2px 2px 4px;
   z-index: 3;
@@ -60,28 +57,24 @@ video{
   margin: 0;
   color: #fff;
   width: 700px;
- 
 }
-
 
 .botonVideo {
   margin-top: 3%;
   padding: 10px 20px;
   font-size: 26px;
   color: #fff;
-  background-color: #007BFF;
+  background-color: #024bca;
   border: none;
   border-radius: 5px;
-  
-  
 }
 
+/* --- SECCIÓN GALERÍA --- */
 .texto-galeria {
   text-align: center;
   color: #a1824a;
   letter-spacing: 8px;
-  margin: 50px 20px 20px 20px;
-  
+  margin: 115px 20px 20px 20px;
 }
 
 .titulo-galeria {
@@ -91,8 +84,8 @@ video{
   font-family: "Lobster Two", sans-serif;
   font-weight: 400;
   font-style: normal;
- 
 }
+
 .galeria-imagenes {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
@@ -100,17 +93,14 @@ video{
   padding: 30px;
   width: 100%;
   margin: 0 auto;
-  
 }
 
-
-
 .card-vehiculo {
-  position: relative; /* Crea el marco de referencia para la capa */
+  position: relative; 
   min-width: 100%;
   min-height: 100%;
   border-radius: 12px;
-  overflow: hidden; /* Corta la capa y la imagen para que respeten las esquinas redondeadas */
+  overflow: hidden; 
   font-family: "Lobster Two", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -119,13 +109,12 @@ video{
 .card-vehiculo img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Evita que el carro se vea estirado */
+  object-fit: cover; 
   display: block;
 }
 
-/* La capa  sobre la imagen */
 .capa-imagenes {
-  position: absolute; /* Se ancla al .card-vehiculo más cercano*/
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
@@ -135,105 +124,380 @@ video{
   pointer-events: none; 
 }
 
-/* Estilos para el texto dentro de la tarjeta  */
 .info-vehiculo {
+  display: flex;
+  flex-flow: column nowrap;
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  z-index: 3; /* Por encima de la capa oscura  */
+  bottom: 8px;
+  left: 5px;
+  right: 5px;
+  z-index: 3; 
   font-size:10px;
-  min-width: 90%;
-
-
-  
 }
+
 .textos{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  margin-right: 10px;
+  margin:8px 1px 0 4px;
+  text-wrap: pretty;
+}
+
+/* --- MENÚ NAVEGACIÓN --- */
+header{
+  position: absolute;
+  z-index: 4;
+}
+
+.toggle{
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.slide{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #111;
+  transition: left 0.2s ease;
+  padding: 20px;
+}
+
+.slide.abierto{
+  left: 0;
+}
+
+.cerrar{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.botonMenu{
+  filter: brightness(0) invert(1);
+  min-width: 50px;
+}
+
+.botonCerrar{
+  filter: brightness(0) invert(1);
+  max-width: 30px;
+}
+
+.lista{
+  list-style: none;
+}
+
+.lista li{
+  margin-bottom: 15px;
+}
+
+.lista a{
+  text-decoration: none;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.lista a:focus{
+  color: #d4af37;
+}
+
+.beneficio-imagen3,.beneficio-imagen1,.beneficio-imagen2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+ margin-bottom: 200px;
+}
+
+.beneficio-imagen2{
+
+ flex-direction: row-reverse;
+
+}
+.beneficios{
+  width:  50%;
+  border-radius: 5px;
+   max-height: 350px;
+
+}
+
+.beneficio-info{
+  font-family: 'Playfair Display', serif; /* Una fuente con serifa se ve más cara */
+  font-size: 15px;
+  width: 40%;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  padding: 40px;             
+  background-color: rgba(10, 10, 10, 0.7); 
+  max-height: 300px;
   
 }
 
-
-
-
-
-
-
-
-
-
-@media (max-width: 600px) {
-    .galeria-imagenes {
-      grid-template-columns: repeat(2, 1fr); 
-      gap: 10px;
-    }
-
-    .tituloPrincipal {
-      font-size: 35px;
-      width: 90%;
-    }
+.porque-elegirnos{
+  width: 90%;
+  margin: auto;
+  margin-top: 250px;
+ 
 }
 
 
 
-@media (max-width: 564px) {
-  .tituloPrincipal {
-   font-size: 21px;
-   width: 240px;
+
+.titulos-beneficio{
+color: #a1824a;
+margin-bottom: 5px;
+}
+.contenedor-textos{
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+
+.titulo-seccionbeneficios{
+ font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  
+}
+
+.subtitulo{
+  color: #a1824a;
+  letter-spacing: 8px;
+
+}
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  color: #d4af37;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+  max-height: 200px;
+  gap: 15px;
+}
+
+.texto-footer{
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* --- RESPONSIVIDAD --- */
+
+/* --- Header de pc--- */
+
+@media (min-width: 770px) {
+header {
+    width: 100%;
+   
   }
-  .contenidoVideo {
-  max-width: 100%;
 
-}  
-.botonVideo {
-  font-size: 13px;
-  padding: 8px;
+  .header-pc {
+    display: flex;
+    justify-content: center; /* Centra el nav horizontalmente */
+    align-items: center;     
+    width: 100%;
+    padding: 40px 0;       
+  }
 
-}
-.texto-galeria {
- font-size: 10px;
- margin-bottom: 4px;
-}
-.titulo-galeria {
- font-size: 20px;
-
-}
-
-}
+  .lista-pc {
+    display: flex;
+    gap: 60px;               
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
 
+  .lista-pc a {
+    text-decoration: none;
+    color: #ffffff;         
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;    
+    transition: color 0.3s ease;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  }
 
-@media (min-width: 565px) and (max-width: 666px) {
-    .tituloPrincipal {
-    font-size: 32px;
-    width: 340px;
+  .lista-pc a:hover {
+    color: #a1824a;        
     
   }
-  .botonVideo {
-  font-size: 13px;
-  padding: 5px;
 
-}
-
-}
-
-@media (min-width: 666px) and (max-width: 1441px) {
-    .tituloPrincipal {
-    font-size: 41px;
-    width: 450px;
-    
+  /* desactivar la versión mobil */
+  .header-mobil {
+    display: none;
   }
-  .botonVideo {
-  font-size: 13px;
-  padding: 5px;
-
-}
-
 }
 
 
 @media (max-width: 770px) {
-   .textos{
-   display: none;
+    /* Convertimos los contenedores de horizontal a vertical */
+  .beneficio-imagen3, 
+  .beneficio-imagen1, 
+  .beneficio-imagen2 {
+    flex-direction: column ;
+    padding: 20px 10px;
+    margin-bottom: 80px; 
+  }
+
+  
+  .beneficio-info {
+    width: 100%; 
+    border-radius: 0 0 5px 5px; 
+    max-height: none;
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Ajustamos la imagen del beneficio */
+  .beneficios {
+    width: 100%; 
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0; 
+  }
+
+
+  .porque-elegirnos {
+    width: 95%;
+    margin-top: 100px; /* Reducimos el margen superior de 250px */
+  }
+
+  /* Títulos y subtítulos más proporcionales a la pantalla pequeña */
+  .titulo-seccionbeneficios {
+    font-size: 28px;
+  }
+
+  .subtitulo {
+    letter-spacing: 4px; 
+    font-size: 12px;
+  }
+
+
+  .textos{
+    display: none;
+  }
+  .header-pc {
+    display: none;
+  }
+
+}
+
+
+@media (min-width: 770px) and (max-width: 950px) {
+  .beneficio-info{
+    font-size: 12px;
+    
+  }
+  .titulos-beneficio{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-imagenes {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+  }
+  .tituloPrincipal {
+    font-size: 19px;
+    width: 250px;
+    margin-top: 30px;
+  }
+  .botonMenu{
+    min-width: 100%;
+  }
+  .toggle{
+    margin: 0;
+    padding: 10px 10px 0 10px;
+  }
+  .botonCerrar{
+    width: 20px;
+  }
+  .info-vehiculo{
+    font-size: 11px;
+  }
+  .textos{
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 564px) {
+  .contenidoVideo {
+    max-width: 100%;
+  }  
+  .botonVideo {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .texto-galeria {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+  .titulo-galeria {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 565px) and (max-width: 666px) {
+  .tituloPrincipal {
+    font-size: 32px;
+    width: 340px;
+  }
+  .botonVideo {
+    font-size: 13px;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 666px) and (max-width: 1441px) {
+  .tituloPrincipal {
+    font-size: 41px;
+    width: 450px;
+  }
+  .botonVideo {
+    font-size: 13px;
+    padding: 5px;
+  }
+  .info-vehiculo{
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .textos{
+    font-size: 10px;
+    font-weight: normal;
+  }
+  .contactenos{
+    grid-template-columns: repeat(5, 1fr);
   }
 }
